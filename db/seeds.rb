@@ -1,7 +1,61 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+apartments = [
+  {
+    address1: "123 Main St.",
+    address2: "Apt. 43",
+    city: "Butte",
+    postalcode: 12345,
+    state: "CA",
+    country: "USA",
+    managername: "Alex",
+    managerphone: "(123)456-7890",
+    managerhours: "8am - 5pm M-F",
+  },
+  {
+    address1: "456 East Rd.",
+    address2: "Unit A",
+    city: "Butte",
+    postalcode: 12345,
+    state: "CA",
+    country: "USA",
+    managername: "Alex",
+    managerphone: "(123)456-7890",
+    managerhours: "8am - 5pm M-F",
+  },
+  {
+    address1: "789 Sheet St.",
+    address2: "Apt. 9",
+    city: "Butte",
+    postalcode: 12345,
+    state: "CA",
+    country: "USA",
+    managername: "Alex",
+    managerphone: "(123)456-7890",
+    managerhours: "8am - 5pm M-F",
+  },
+  {
+    address1: "101 Mug Ave.",
+    address2: "Unit 12",
+    city: "Butte",
+    postalcode: 12345,
+    state: "CA",
+    country: "USA",
+    managername: "Alex",
+    managerphone: "(123)456-7890",
+    managerhours: "8am - 5pm M-F",
+  },
+  {
+    address1: "666 Olympic Ave.",
+    address2: "Apt. 213",
+    city: "Butte",
+    postalcode: 12345,
+    state: "CA",
+    country: "USA",
+    managername: "Alex",
+    managerphone: "(123)456-7890",
+    managerhours: "8am - 5pm M-F",
+  },
+]
+
+apartments.each do |apartments|
+  Apartment.create(apartments)
+end
