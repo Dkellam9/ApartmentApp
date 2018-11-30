@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_194256) do
+ActiveRecord::Schema.define(version: 2018_11_30_225829) do
 
   create_table "apartments", force: :cascade do |t|
     t.string "address1"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2018_11_27_194256) do
     t.string "managerhours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_apartments_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

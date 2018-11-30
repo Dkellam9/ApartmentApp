@@ -1,5 +1,5 @@
 class ApartmentsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :update, :destroy]
+  before_action :authenticate_user!, only: [:update, :destroy]
   before_action :set_apt, only: [:show, :update, :destroy]
 
   def index
@@ -27,6 +27,6 @@ class ApartmentsController < ApplicationController
   end
 
   def apartment_params
-    params.require(:apartment).permit(:address1, :address2, :city, :state, :postalcode, :managername, :managerphone, :managerhours)
+    params.require(:apartment).permit(:address1, :address2, :city, :state, :postalcode, :managername, :managerphone, :managerhours, :user_id)
   end
 end
